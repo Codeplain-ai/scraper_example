@@ -1,0 +1,25 @@
+***definitions***
+
+- :Website: is the website that will be used to obtain the data.
+
+- :Scraper: is a web automation tool that logs into :Website: and retrieves business information.
+
+***implementation reqs***
+
+- :Scraper: should use real browser automation (Playwright) to mimic real user behavior.
+
+- The executable file should be called "scraper.py"
+
+- Use `requirements.txt` file to install the dependencies for :Scraper:.
+
+- The scraper should handle common web automation scenarios:
+  - Wait for page elements to load
+  - Handle dynamic content
+
+- Print out the html code of the pages visited to help debugging in test execution.
+
+***test reqs***
+
+- It is necessary to run tests against the live website.
+
+- Use logs extensively to debug the application.

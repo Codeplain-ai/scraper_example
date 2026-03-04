@@ -1,0 +1,34 @@
+---
+import:
+  - scraper_reqs
+---
+
+***implementation reqs***
+
+- The URL of :Website: is "https://www.handelsregister.de/rp_web/normalesuche/welcome.xhtml"
+
+- The main search input field is "Company or Keywords"
+
+***test reqs***
+
+- When testing use the search query "bsa project gmbh"
+
+***functional specs***
+
+- Implement search handling functionality by scraping the :Website:
+  - Locate the search input field. The label for the search input field is "Company or Keywords".
+  - Enter the search query into the search input field.
+  - Submit the search by clicking find.
+
+- Implement result handling functionality
+  - After clicking find, the results are displayed in a table.
+  - Identify the correct by matching the exact search query in the results table.
+  - The matching should be typecase insensitive.
+  - Partial matches are not allowed. So the search query "abc" should not match "abcd" or "gmbh bbabcde" but should match "ABC".
+  
+  ***acceptance tests***
+    - Verify that the search query "bork gmbh" matches "Bork GmbH" with code "9165" and nothing else.
+
+- Implement download functionality for the matching result.
+  - Download the Aktueller Abdruck PDF file.
+  - Save the PDF file to the current directory.
